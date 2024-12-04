@@ -57,10 +57,17 @@ const App = () => {
   };
 
   return (
+    
     <div className="app">
+      <div className='container__texture'>
+        <img className='background' src="./public/карт.jpg" alt="" />
+      </div>
+      
       <h1 className='app__title'>To-Do List</h1>
       <TodoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />
       <AddTodoForm addTodo={addTodo} />
+      
+      
       
     </div>
   );

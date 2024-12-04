@@ -1,0 +1,19 @@
+.form{
+    margin: 30px 0px 0px 5px;
+    display: flex;
+    gap: 5px;
+    position: relative;
+    z-index: 50;
+    top: 10px;
+}
+.add__todo__form{
+    width: 535px;
+    height: 25px;
+    border-radius: 5px;
+    
+    border: 1px solid grey;
+}
+.button{
+    border-radius: 5px;
+    border: 1px solid grey;
+}

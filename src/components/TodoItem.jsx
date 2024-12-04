@@ -10,9 +10,14 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo }) => {
       classNames="todo"
       appear
     >
+      
       <div className={`todo-item ${todo.completed ? 'completed' : ''}`}>
-        <span onClick={() => toggleTodo(todo.id)}>
-          {todo.text}
+        
+        <span className='todo__text' onClick={() => toggleTodo(todo.id)}>
+          <input type="checkbox" id='checkbox' className='checkbox' />
+          <label htmlFor="checkbox">{todo.text}</label>
+          
+          
         </span>
         <button onClick={() => deleteTodo(todo.id)}>Delete</button>
       </div>
