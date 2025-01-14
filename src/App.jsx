@@ -10,7 +10,13 @@ const App = () => {
   useEffect(() => {
     fetch('http://localhost:5000/todos')
       .then((res) => res.json())
-      .then((data) => setTodos(data));
+      .then((data) => {
+        if (Array.isArray(data)){
+          setTodos(data);
+        } else {
+          setTodos([data]);
+        }
+      });
   }, []);
 
   // Добавляем задачу на сервер
